@@ -2,13 +2,12 @@
 
 namespace app\controllers;
 
+use app\models\MaintextForm;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
-use app\models\ContactForm;
-use app\models\EntryForm;
 
 class SiteController extends Controller
 {
@@ -20,19 +19,19 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout'],
+                'only' => ['create', 'update'],
                 'rules' => [
+                    // deny all POST requests
                     [
-                        'actions' => ['logout'],
+                        'allow' => false,
+                        'verbs' => ['POST']
+                    ],
+                    // allow authenticated users
+                    [
                         'allow' => true,
                         'roles' => ['@'],
                     ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
+                    // everything else is denied
                 ],
             ],
         ];
@@ -61,7 +60,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $quote = MaintextForm::findOne(1);
+        return $this->render('vmain', [            
+            'quote' => $quote,
+            ]);        
     }
 
     /**
@@ -95,50 +97,4 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
-
-    /**
-     * Displays contact page.
-     *
-     * @return string
-     */
-    public function actionContact()
-    {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
-        }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
-    }
-
-    public function actionEntry()
-    {
-        $model = new EntryForm;
-
-        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            // данные в $model удачно проверены
-
-            // делаем что-то полезное с $model ...
- 
-            return $this->render('entry-confirm', ['model' => $model]);
-        } else {
-            // либо страница отображается первый раз, либо есть ошибка в данных
-            return $this->render('entry', ['model' => $model]);
-        }
-    }
-
-
 }

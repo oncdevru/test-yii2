@@ -1,0 +1,46 @@
+<?php
+
+use yii\widgets\LinkPager;
+
+
+
+
+
+$i = 1;
+
+echo  "<div id=\"onc\"> <div class=\"row\" id = \"drow\"><div class=\"col-sm-12\" id =\"twl\"> <div class = \"welc\"><a href=\"/\">ONCdev</a></div></div>";
+
+echo "<div class=\"row\">";
+echo "<div class=\"col-xs-12\"> Разделы: <a href=\"\arts\">Все</a> | <a href=\"?tag=books\">Книги</a> | <a href=\"?tag=films\">Фильмы</a></div></div><div class=\"row\">";
+foreach ($model as $models){
+
+    if ($i<=3) {
+        echo "<div class=\"col-lg-4\"><a href=\"/arts?entry=$models->slug\" class=\"woblock\"><img class = \"pr_pic\"  src=\"/images/$models->picture\"><div class=\"plink\" >$models->title</div></a></div>";
+        $i++;
+    }else if ($i>3){
+        echo "</div>";
+        echo "<div class=\"row\">";
+        echo "<div class=\"col-lg-4\"><div class=\"woblock\"><img class = \"pr_pic\" src=\"/images/$models->picture\"><a class=\"plink\" href=\"/arts?entry=$models->slug\" >$models->title</a></div></div>";
+        $i=1;
+    }
+
+}
+echo "<div class=\"col-xs-12\"><div class =\"pagg\">";
+echo LinkPager::widget([
+    'pagination' => $pages,
+]);
+echo "</div></div></div><div class=\"col-xs-12\" id=\"socialn\" > <a href = \"https://vk.com/id42034259\" target=_blank><img src=\"/images/vk1.png\"/></a><a href = \"\"><img src=\"/images/fb1.png\"/></a><a href = \"\"><img src=\"/images/ok1.png\"/></a><a href = \"\"><img src=\"/images/tw1.png\"/></a></div>";
+echo "</div>";
+echo "</div>";
+
+$script = <<< JS
+$('.pr_pic').each(function(){
+var height = $(this).parent().height();
+var width = $(this).parent().width();
+var offs = $(this).parent().offset();
+$(this).css('height', height*0.9);
+$(this).css('width', width*0.9);
+$(this).offset(offs);
+});
+JS;
+$this->registerJs($script, yii\web\View::POS_END);

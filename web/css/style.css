@@ -1,0 +1,280 @@
+body {
+	padding:0;
+}
+@font-face {
+    font-family: FSans; 
+    src: url('fonts/10111.ttf');
+   }
+
+.menu {
+	display: block;	
+	width: 140px;
+	height: 140px;
+	position: relative;
+	border-top: solid 1px #06400A;
+}
+.menua {
+	display: block;	
+	width: 140px;
+	height: 140px;
+	position: relative;
+	border-top: solid 1px #06400A;
+}
+.menu:hover {
+	background: rgba(109,0,25,1);
+background: -moz-linear-gradient(left, rgba(109,0,25,1) 0%, rgba(143,2,34,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(109,0,25,1)), color-stop(100%, rgba(143,2,34,1)));
+background: -webkit-linear-gradient(left, rgba(109,0,25,1) 0%, rgba(143,2,34,1) 100%);
+background: -o-linear-gradient(left, rgba(109,0,25,1) 0%, rgba(143,2,34,1) 100%);
+background: -ms-linear-gradient(left, rgba(109,0,25,1) 0%, rgba(143,2,34,1) 100%);
+background: linear-gradient(to right, rgba(109,0,25,1) 0%, rgba(143,2,34,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d0019', endColorstr='#8f0222', GradientType=1 );
+}
+.mText{
+	position: absolute; bottom: 25px;
+	text-align: center;
+	text-decoration: none;	
+	color: #ecd5e9;
+	width: 100%;
+	font: bold 25px FSans ;
+}
+#spacer {display: block;
+	position: absolute; bottom: 0px;
+}
+.footer {
+	display: block;		
+	width: 100vw;
+	height: 250px;
+	margin-top:1px;
+	position: bottom: 0px;
+	background: rgba(44,44,44,1);
+	background: -moz-linear-gradient(left, rgba(44,44,44,1) 0%, rgba(44,44,44,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(44,44,44,1)), color-stop(100%, rgba(44,44,44,1)));
+	background: -webkit-linear-gradient(left, rgba(44,44,44,1) 0%, rgba(44,44,44,1) 100%);
+	background: -o-linear-gradient(left, rgba(44,44,44,1) 0%, rgba(44,44,44,1) 100%);
+	background: -ms-linear-gradient(left, rgba(44,44,44,1) 0%, rgba(44,44,44,1) 100%);
+	background: linear-gradient(to right, rgba(44,44,44,1) 0%, rgba(44,44,44,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c2c2c', endColorstr='#2c2c2c', GradientType=1 );
+}
+#oncz {
+	display: block;
+	opacity: 0.0;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+#olp {
+	background-color: #373a3c;
+
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+#onc {
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	margin-bottom: 15px;
+}
+#onctext {
+	font-size: xx-large;
+	background-color: #880000;
+	padding: 10px;
+	height: 100%;
+	margin: 0;
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+.quotes {
+    font-style: italic;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+}
+ 
+.quotes:before {
+    color: #bbb;
+    content: "\201C"; /* Непечатаемый символ слева */
+    font-size: 3em;
+    line-height: 0.1em;
+    margin-right: 0.2em;
+    vertical-align: -.4em;
+}
+ 
+.quotes:after {
+    color: #bbb;
+    content: "\201D"; /* Непечатаемый символ справа */
+    font-size: 3em;
+    line-height: 0.1em;
+    vertical-align: -.45em;
+}
+ 
+.quotes > p:first-child {
+    display: inline;
+}
+.admincont {
+	padding:20px;
+}
+.woblock {
+	display: block;
+	width: 100%;
+	height:250px;
+	margin-left: 20px;
+	padding:0;
+	margin-bottom: 15px;
+}
+.pr_pic {
+	margin-left:15px;
+	padding:0;
+	border-radius: 5px;
+	border: 1px solid #5e5e5e;
+}
+.woheader {
+	display: block;
+	width: 100%;
+	height: 250px;
+	background: green;
+}
+.wwrown {
+	min-width: 1200px;
+}
+body {
+	background:
+	radial-gradient(black 15%, transparent 16%) 0 0,
+	radial-gradient(black 15%, transparent 16%) 8px 8px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	background-color:#282828;
+	background-size:16px 16px;
+}
+.navbar-default .navbar-brand {
+	color: rgba(224, 213, 213, 1);
+}
+.navbar-default {
+	font-size: 14px;
+	background-color: rgba(55, 58, 60, 1);
+	border-width: 0px;
+	border-radius: 4px;
+}
+.navbar-default .navbar-nav>li>a {
+	color: rgba(222, 222, 222, 1);
+	background-color: rgba(55, 58, 60, 1);
+}
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+	color: rgba(0, 0, 0, 1);
+	background-color: rgba(148, 28, 28, 1);
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+	color: rgba(217, 217, 217, 1);
+	background-color: rgba(231, 231, 231, 1);
+}
+.navbar-default .navbar-toggle {
+	border-color: #ddd;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+	background-color: #ddd;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #888;
+}
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+	background-color: #373a3c;
+}
+#drow {
+
+	background-color: whitesmoke;
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	height: 100%;
+	border-radius: 0px 0px 10px 10px;
+	-moz-border-radius: 0px 0px 10px 10px;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	border: 0px solid #000000;
+}
+#rcoll {
+
+}
+#lcoll {
+	border-left: 1px dashed #262626;
+}
+.welc {
+	display: block;
+	width: 250px;
+	font-size: 70px;
+	padding: 40px;
+	color: gainsboro;
+
+}
+#twl {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
+	background-color: #373a3c;
+	margin-bottom: 50px;
+	background-image: url("images/gear1.png");
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.welc a {
+	text-decoration: none;
+	color: gainsboro;	
+}
+.welc a:hover {
+	text-decoration: none;
+	color: gainsboro;
+}
+.carousel-caption {
+	background-color: #373a3c;
+	opacity: 0.8;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border: 0px solid #000000;
+}
+#llinks {
+	font-size: 22px;
+}
+#socialn {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-top: 1px solid black;
+	margin-top: 18px;
+	-webkit-box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
+}
+#socialn a img{
+	margin-left: 10px;
+	-webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.75);
+}
+.plink {
+	display: block;
+	margin: auto;
+}
+.pagg {
+	display: block;
+	width: 140px;
+	margin: auto;
+}
+#pic1{
+	float: right;
+	margin-right: 10px;
+}
+#pic2 {
+	position: absolute;
+}
+#ptext {
+	padding-left: 15px;
+}
+.bloge {
+	padding-left:20px;
+	padding-right: 15px;
+}
